@@ -29,7 +29,7 @@ header {
 .navbar {
     width: 100vw;
     height: 3.5vw;
-    padding-left: 2.5vw;
+    padding-left: 2vw;
     padding-right: 2.5vw;
     display: flex;
     align-items: center;
@@ -90,7 +90,6 @@ header {
     font-size: 1vw;
     border: 0;
     outline: 0;
-    /* background-color: transparent; */
 }
 
 .nav-middle .microphone {
@@ -125,10 +124,22 @@ header {
     background: #fff;
     width: 20vw;
     height: 100vh;
-    position: fixed;
-    padding-left: 1.5vw;
+    position: absolute;
+    padding-left: 2.5vw;
+}
+.top-sidebar {
+    display: flex;
+    align-items: center;
 }
 
+.top-sidebar .menu-icon {
+    margin-right: 2.5vw;
+    height: 2vw;
+}
+
+.top-sidebar .logo {
+    height: 1.7vw;
+}
 .shortcuts a img {
     width: 1.5vw;
     margin-right: 2vw;
@@ -179,8 +190,21 @@ header {
     border-radius: 100%;
     margin-right: 1.5vw;
 }
+
+/*------------SMALL SIDEBAR--------------*/ 
+
 .small-sidebar {
     width: 5vw;
+}
+.small-sidebar a p{
+    display: none;
+}
+.small-sidebar p{
+    display: none;
+}
+.small-sidebar hr{
+    width: 50%;
+    margin-bottom: 1.5vw;
 }
 @media(max-width:1280px) {
 
@@ -255,30 +279,52 @@ header {
     /* ---------------SIDEBAR -----------------*/
 
     .sidebar {
-        width: 22vw;
+        width: 5vw;
         height: 100vh;
-        padding-left: 1.5vw;
+        padding-left: 2vw;
     }
-
+    .sidebar hr {
+        width: 80%;
+    }
+    .top-sidebar {
+        display: flex;
+        align-items: center;
+    }
+    
+    .top-sidebar .menu-icon {
+        margin-right: 2.5vw;
+        height: 2.8vw;
+    }
+    
+    .top-sidebar .logo {
+        height: 2.2vw;
+    }
     .shortcuts a img {
-        width: 2.2vw;
+        width: 1.5vw;
         margin-right: 2vw;
     }
-
-    .shortcuts a {
-        font-size: 1.5vw;
+    .shortcuts a img {
+        width: 3vw;
+        margin-right: 2vw;
     }
-
-    .subscribeds {
-        font-size: 1.5vw;
-        margin: 1.5vw 0vw;
-        color: #5a5a5a;
+    .shortcuts a{
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+    }
+    .shortcuts a p{
+        display: none;
     }
 
     .subscribeds a img {
         width: 2.5vw;
         border-radius: 100%;
         margin-right: 1.5vw;
+    }
+    .subscribeds p {
+        display: none;
+    }
+    .subscribeds a p {
+        display: none;
     }
 }
 
@@ -364,28 +410,32 @@ header {
         /* ---------------SIDEBAR -----------------*/
 
         .sidebar {
-            width: 25vw;
+            width: 5vw;
             height: 100vh;
-            padding-left: 1.5vw;
+            padding-left: 2vw;
         }
     
         .shortcuts a img {
-            width: 2.8vw;
+            width: 3vw;
             margin-right: 2vw;
         }
-    
-        .shortcuts a {
-            font-size: 1.7vw;
+        .shortcuts a{
+            margin-top: 2vw;
+            margin-bottom: 2vw;
         }
-    
-        .subscribeds {
-            font-size: 1.7vw;
-            margin: 1.5vw 0vw;
+        .shortcuts a p{
+            display: none;
         }
     
         .subscribeds a img {
-            width: 3vw;
+            width: 2.5vw;
             border-radius: 100%;
             margin-right: 1.5vw;
+        }
+        .subscribeds p {
+            display: none;
+        }
+        .subscribeds a p {
+            display: none;
         }
 }
