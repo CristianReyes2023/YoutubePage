@@ -176,63 +176,51 @@ img{
     /* NAVBAR CLASES*/
     .navbar{
         width: 100vw;
-        height: 10vw;
+        height: 6.5vw;
         padding-left: 2vw;
         padding-right: 2vw;
     }
-
-    .nav-left{
-        display: flex;
-        align-items: center;
-    }
-
     .nav-left .menu-icon {
         margin-right: 2vw;
-        height: 1.5vw;
+        height: 4vw;
     }
     .nav-left .logo {
-        height: 1.2vw;
+        height: 3vw;
     }
-    .nav-middle{
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-    }
-
     .nav-middle .search-box{
         display: flex;
         border: #ccc solid 1px;
-        height: 2.3vw;
+        height: 4.5vw;
         border-radius: 3vw ;
         padding: 0vw 1vw 0vw 1vw;
     }
     .nav-middle .search-box .block1{
         display: flex;
         align-items: center;
-        height: 2.3vw;
+        height: 4.2vw;
     }
     .nav-middle .search-box .block2{
         display: flex;
         align-items: center;
-        height: 2.3vw;
+        height: 4.3vw;
         padding-left:1vw ;
         border-left: #ccc solid 1px;
     }
     .nav-middle .search-box .block2 img{
-        height: 1.2vw;
+        height: 2.3vw;
     }
 
     .nav-middle .search-box input{
         width: 30vw;
-        height: 1.1vw;
-        font-size: 1vw;
+        height: 2.5vw;
+        font-size: 1.8vw;
         border: 0;
         outline: 0;
         /* background-color: transparent; */
     }
 
     .nav-middle .microphone{
-        height: 2.5vw;
+        height: 4vw;
         margin-left: 1.5vw;
         background-color: rgb(242, 242, 242);
         padding: 0.6vw;
@@ -243,11 +231,11 @@ img{
         align-items: center;
     }
     .nav-right img{
-        height: 1.5vw;
-        margin-right: 1.5vw;
+        height: 3vw;
+        margin-right: 3.5vw;
     }
     .nav-right .user-icon {
-        height: 2.2vw;
+        height: 4vw;
         padding: 0.5vw;
         border-radius: 100%;
         margin-right: 0;
