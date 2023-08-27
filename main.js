@@ -8,10 +8,6 @@ menuIcon.addEventListener('click', () => {
 })
 
 
-
-
-
-
 const path = "jsonVideos";
 
 let construirVideos = async () => {
@@ -34,34 +30,32 @@ let construirVideos = async () => {
 
 construirVideos();
 
-// const path = "jsonVideos";
-
-// let construirVideos = async () => {
-//     let peticion = await fetch(`${path}.json`);
-//     let res = await peticion.json();
+// const options = {
+// 	method: 'GET',
+// 	headers: {
+// 		'X-RapidAPI-Key': '67bc891487msh83d7f6087e5baa4p137206jsn95c6efd2fc62',
+// 		'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
+// 	}
+// };
+// fetch("https://youtube138.p.rapidapi.com/channel/videos/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US",options)
+//     .then(res => res.json())
+//     .then(response => {
 //     let selecion = document.querySelector("#myVideos");
-//     selecion.insertAdjacentHTML("beforeend", `
-//     <div class="list-video">
+//     selecion.insertAdjacentHTML("beforeend", /*html*/`
 //     ${res.contents.map((video) => /*html*/ `
+//     <div class="list-video">
 //         <div class="thumbnails">
-//             ${video.video.thumbnails.map((thumbnail) => /*html*/ `
-//                 <img src="${thumbnail.url}" alt="videos" class="img-miniatura"/>
-//             `).join(" ")}
+//             <img src="${video.video.thumbnails[video.video.thumbnails.length - 1].url}" alt="videos" class="img-miniatura"/>
 //         </div>
 //         <div class="video-info">
 //             <a href="index-playvideo.html">${video.video.title}</a>
 //             <p>${video.video.stats.views} Views &bull; ${video.video.publishedTimeText}</p>
 //         </div>
-//     `).join(" ")}
 //     </div>
-//     `);
-// }
-
-// construirVideos();
-
-
-
-
+//     `).join(" ")}`);
+//     console.log(response.contents[0].type);
+//     })
+//     .catch(err => console.log(err))
 
 
 
