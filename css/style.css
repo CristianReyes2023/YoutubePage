@@ -256,7 +256,7 @@ header {
 
 .list-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15vw, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
     grid-column-gap: 1vw;
     grid-row-gap: 2vw;
     margin-top: 1vw;
@@ -270,7 +270,7 @@ header {
     width: 100%;
 }
 .list-video .img-miniatura{
-    width: 100%;
+    width: 35vw;
     border-radius: 1vw;
 }
 

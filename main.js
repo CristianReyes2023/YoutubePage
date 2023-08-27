@@ -10,6 +10,8 @@ menuIcon.addEventListener('click', () => {
 
 
 
+
+
 const path = "jsonVideos";
 
 let construirVideos = async () => {
@@ -17,20 +19,17 @@ let construirVideos = async () => {
     let res = await peticion.json();
     let selecion = document.querySelector("#myVideos");
     selecion.insertAdjacentHTML("beforeend", /*html*/`
-    <div class="list-video">
     ${res.contents.map((video) => /*html*/ `
+    <div class="list-video">
         <div class="thumbnails">
-            ${video.video.thumbnails.map((thumbnail) => /*html*/ `
-                <img src="${thumbnail.url}" alt="videos" class="img-miniatura"/>
-            `).join(" ")}
+            <img src="${video.video.thumbnails[video.video.thumbnails.length - 1].url}" alt="videos" class="img-miniatura"/>
         </div>
         <div class="video-info">
             <a href="index-playvideo.html">${video.video.title}</a>
             <p>${video.video.stats.views} Views &bull; ${video.video.publishedTimeText}</p>
         </div>
-    `).join(" ")}
     </div>
-    `);
+    `).join(" ")}`);
 }
 
 construirVideos();
