@@ -217,7 +217,7 @@ header {
 
 .list-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(15vw, 1fr));
     grid-column-gap: 1vw;
     grid-row-gap: 2vw;
     margin-top: 1vw;
@@ -248,13 +248,14 @@ header {
 }
 .video-info{
     color: #5a5a5a;
-    font-size: 1.2vw;
-    padding-left: 1vw;
+    font-size: 0.8vw;
+    padding-left: 0.5vw;
 }
 .video-info a{
     display: block;
     color: black;
-    font-size: 1.2vw;
+    text-align: justify;
+    font-size: 0.8vw;
     font-weight: 600;
     margin-bottom: 0.5vw;
     
@@ -373,6 +374,42 @@ header {
         width: 50%;
         margin-bottom: 1.5vw;
     }
+    /*-------MINI VIDEOS--------*/
+
+.list-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
+
+}
+.list-video {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 1vw;
+    width: 100%;
+}
+
+.video-browser img{
+    height: 3vw;
+    padding: 0.6vw;
+    border-radius: 100%;
+    margin-right: 0; 
+    background-color: #e8e8e8;
+}
+.video-info{
+    color: #5a5a5a;
+    font-size: 0.8vw;
+    padding-left: 0.5vw;
+}
+.video-info a{
+    display: block;
+    color: black;
+    text-align: justify;
+    font-size: 1vw;
+    font-weight: 600;
+    margin-bottom: 0.5vw;
+    
+}
 }
 
 @media(max-width:800px) {
@@ -382,7 +419,7 @@ header {
         width: 100vw;
         height: 6.5vw;
         padding-left: 2vw;
-        padding-right: 2vw;
+        padding-right: 5vw;
     }
 
     .nav-left .menu-icon {
@@ -426,7 +463,6 @@ header {
         font-size: 1.8vw;
         border: 0;
         outline: 0;
-        /* background-color: transparent; */
     }
 
     .nav-middle .microphone {
@@ -499,4 +535,60 @@ header {
         width: 50%;
         margin-bottom: 1.5vw;
     }
+    /*--------------MAIN CONTAINER--------------*/
+
+    .main-container{
+        box-sizing: border-box;
+        background: #fff;
+        padding-left: 24vw;
+        padding-right: 5vw;
+        padding-top: 1vw;
+        padding-bottom: 1vw;
+    }
+    .large-container{
+        padding-left: 7vw;
+    }
+    .portada-img img{
+        width: 100%;
+        height: 15vw;
+        border-radius: 1vw;
+    }
+
+    /*-------MINI VIDEOS--------*/
+
+    .list-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(45vw, 1fr));
+    }
+    .list-video .img-miniatura{
+        width: 100%;
+        border-radius: 1vw;
+    }
+
+    .video-browser{
+        display: flex;
+        align-items: center;
+        padding: 1vw 1vw 0vw 1vw;
+    }
+    .video-browser img{
+        height: 6vw;
+        padding: 0.6vw;
+        border-radius: 100%;
+        margin-right: 0; 
+        background-color: #e8e8e8;
+    }
+    .video-info{
+        color: #5a5a5a;
+        font-size: 1.7vw;
+        padding-left: 1vw;
+    }
+    .video-info a{
+        display: block;
+        color: black;
+        font-size: 2vw;
+        font-weight: 600;
+        margin-bottom: 0.5vw;
+        
+    }
+
 }
