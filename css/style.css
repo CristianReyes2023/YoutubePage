@@ -260,8 +260,26 @@ header {
     margin-bottom: 0.5vw;
     
 }
+/*-------------PLAY VIDEOS PAGE--------------*/
+.play-container {
+    padding-left: 5vw;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.play-video{
+    flex-basis: 60vw;
 
+}
+.right-sidebar{
+    flex-basis: 30vw;
+}
+.play-video video{
+    flex-basis: 100%;
 
+}
 
 @media(max-width:1280px) {
 
