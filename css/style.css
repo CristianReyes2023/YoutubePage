@@ -7,6 +7,7 @@
 
 body {
     width: 100vw;
+    overflow-x: hidden;
 }
 
 a {
@@ -30,7 +31,7 @@ header {
     width: 100vw;
     height: 3.5vw;
     padding-left: 2vw;
-    padding-right: 2vw;
+    padding-right: 3vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -196,49 +197,67 @@ header {
 /*--------------MAIN CONTAINER--------------*/
 
 .main-container{
+    box-sizing: border-box;
     background: #fff;
-    width: 100vw;
     padding-left: 24vw;
     padding-right: 3vw;
     padding-top: 1vw;
     padding-bottom: 1vw;
 }
-.portada-img{
-    width: 75vw;
-    border-radius: 5vw;
+.large-container{
+    padding-left: 7vw;
 }
 .portada-img img{
-    width: 74vw;
+    width: 100%;
     height: 15vw;
-    border-radius: 2vw;
+    border-radius: 1vw;
 }
 
 /*-------MINI VIDEOS--------*/
 
 .list-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
     grid-column-gap: 1vw;
     grid-row-gap: 2vw;
     margin-top: 1vw;
+
 }
 .list-video {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin-top: 1vw;
+    width: 100%;
 }
-.list-video .videos-miniatura{
+.list-video .img-miniatura{
     width: 100%;
     border-radius: 1vw;
 }
-.videos-miniatura img{
-    width: 10vw;
-    border-radius: 1vw;
-}
+
 .video-browser{
     display: flex;
     align-items: center;
+}
+.video-browser img{
+    height: 3vw;
+    padding: 0.6vw;
+    border-radius: 100%;
+    margin-right: 0; 
+    background-color: #e8e8e8;
+}
+.video-info{
+    color: #5a5a5a;
+    font-size: 1.2vw;
+    padding-left: 1vw;
+}
+.video-info a{
+    display: block;
+    color: black;
+    font-size: 1.2vw;
+    font-weight: 600;
+    margin-bottom: 0.5vw;
+    
 }
 
 
