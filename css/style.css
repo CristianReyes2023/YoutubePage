@@ -400,7 +400,7 @@ header {
 .name-other-video {
     font-size: 1.5vw;
     font-weight: 600;
-    margin-bottom: 1.5vw;
+    margin-bottom: 2vw;
     color: black;
 }
 
@@ -411,6 +411,7 @@ header {
 
 .info-views {
     font-size: 1.1vw;
+    padding-bottom: 1vw;
     color: rgb(111, 111, 111);
 }
 
@@ -1070,7 +1071,7 @@ header {
     .name-other-video {
         font-size: 2.5vw;
         font-weight: 600;
-        margin-bottom: 2vw;
+        margin-bottom: 3vw;
         color: black;
     }
 
