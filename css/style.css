@@ -322,7 +322,7 @@ header {
 
 /*-------------PLAY VIDEOS PAGE--------------*/
 .play-container {
-    padding-left: 5.5vw;
+    padding-left: 6vw;
 }
 
 .row {
@@ -331,7 +331,7 @@ header {
     flex-wrap: wrap;
 }
 
-.play-video video {
+.play-video img {
     width: 60vw;
 }
 
