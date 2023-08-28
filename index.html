@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Youtube</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="main.js" defer></script>
+    <script src="js/main.js" type="module" defer></script>
 </head>
 <body>
     <header>
@@ -18,15 +18,19 @@
             </div>
             <!-- Structure of Navbar-searcher -->
             <div class="nav-middle">
-                <div class="search-box">
-                    <div class="block1">
-                        <input type="text" placeholder="Buscar">
+                <div style="display: flex;">
+                    <div class="search-box">
+                        <div class="block1">
+                            <input id="chartSearch" type="text" placeholder="Buscar">
+                        </div>
+                        <div class="block2">
+                            <img src="images/busqueda.png" alt="search">
+                        </div>
                     </div>
-                    <div class="block2">
-                        <img src="images/busqueda.png" alt="search">
-                    </div>
+                    <img class="microphone" src="images/bxs-microphone.png" alt="microphone">
                 </div>
-                <img class="microphone" src="images/bxs-microphone.png" alt="microphone">
+                <div class="result-searching" id="SearchAll">
+                </div>
             </div>
             <!-- Structure of Navbar-Profile -->
             <div class="nav-right">

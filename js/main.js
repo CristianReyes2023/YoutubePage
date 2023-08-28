@@ -1,3 +1,12 @@
+// import { SearchAll } from "../getAll.js";
+
+// document.querySelector("#chartSearch").addEventListener("change",(e)=>{//se puede usar input o change
+//     SearchAll(e.target.value)
+// });
+// SearchAll()
+
+
+
 let menuIcon = document.querySelector(".menu-icon");
 let sidebar = document.querySelector(".sidebar");
 let container = document.querySelector(".main-container");
@@ -8,27 +17,6 @@ menuIcon.addEventListener('click', () => {
 })
 
 
-// const path = "jsonVideos";
-
-// let construirVideos = async () => {
-//     let peticion = await fetch(`${path}.json`);
-//     let res = await peticion.json();
-//     let selecion = document.querySelector("#myVideos");
-//     selecion.insertAdjacentHTML("beforeend", /*html*/`
-//     ${res.contents.map((video) => /*html*/ `
-//     <div class="list-video">
-//         <div class="thumbnails">
-//             <img src="${video.video.thumbnails[video.video.thumbnails.length - 1].url}" alt="videos" class="img-miniatura"/>
-//         </div>
-//         <div class="video-info">
-//             <a href="index-playvideo.html">${video.video.title}</a>
-//             <p>${video.video.stats.views} Views &bull; ${video.video.publishedTimeText}</p>
-//         </div>
-//     </div>
-//     `).join(" ")}`);
-// }
-
-// construirVideos();
 
 const options = {
     method: 'GET',
@@ -38,7 +26,7 @@ const options = {
     }
 };
 
-fetch("jsonVideos.json", options)
+fetch("json/jsonVideos.json", options)
     .then(res => res.json())
     .then(response => {
         let selecion = document.querySelector("#myVideos");
@@ -59,7 +47,7 @@ fetch("jsonVideos.json", options)
     .catch(err => console.log(err));
 
 
-    fetch("jsonVideos.json", options)
+    fetch("json/jsonVideos.json", options)
         .then(res => res.json())
         .then(response => {
             let selecion = document.querySelector("#myPageplay");

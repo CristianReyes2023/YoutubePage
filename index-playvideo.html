@@ -6,27 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="main.js" defer></script>
+    <script src="js/main.js" defer></script>
 </head>
 
 <body>
     <header>
+        <!-- Structure of Navbar -->
         <nav id="mynavBar" class="navbar">
+            <!-- Structure of Navbar-menu -->
             <div class="nav-left">
                 <img class="menu-icon" src="images/menu-hamburguesa.png" alt="menu">
                 <img class="logo" src="images/YouTube_Logo_2017.svg" alt="logo">
             </div>
+            <!-- Structure of Navbar-searcher -->
             <div class="nav-middle">
-                <div class="search-box">
-                    <div class="block1">
-                        <input type="text" placeholder="Buscar">
+                <div style="display: flex;">
+                    <div class="search-box">
+                        <div class="block1">
+                            <input id="chartSearch" type="text" placeholder="Buscar">
+                        </div>
+                        <div class="block2">
+                            <img src="images/busqueda.png" alt="search">
+                        </div>
                     </div>
-                    <div class="block2">
-                        <img src="images/busqueda.png" alt="search">
-                    </div>
+                    <img class="microphone" src="images/bxs-microphone.png" alt="microphone">
                 </div>
-                <img class="microphone" src="images/bxs-microphone.png" alt="microphone">
+                <div class="result-searching" id="SearchAll">
+                </div>
             </div>
+            <!-- Structure of Navbar-Profile -->
             <div class="nav-right">
                 <img src="images/video_icon_128530.png" alt="camera">
                 <img src="images/bell_icon_128467.png" alt="notifications">
@@ -35,29 +43,53 @@
         </nav>
     </header>
     <!-- Structure of Sidebar-left -->
-    <div class="sidebar">
+    <div class="sidebar small-sidebar">
         <!-- Structure of shortcuts-->
         <div class="shortcuts">
-            <a href=""><img src="images/home_icon_128501.png" alt="Home"><p>Home</p></a>
-            <a href=""><img class="shorts" src="images/shorts.png" alt="Shorts"><p>Shorts</p></a>
-            <a href=""><img src="images/media-multimedia.png" alt="Suscripciones"><p>Suscriptores</p></a>
+            <a href=""><img src="images/home_icon_128501.png" alt="Home">
+                <p>Home</p>
+            </a>
+            <a href=""><img class="shorts" src="images/shorts.png" alt="Shorts">
+                <p>Shorts</p>
+            </a>
+            <a href=""><img src="images/media-multimedia.png" alt="Suscripciones">
+                <p>Suscriptores</p>
+            </a>
             <hr>
-            <a href=""><img src="images/play_youtube_social_media.png" alt="Biblioteca"><p>Biblioteca</p></a>
-            <a href=""><img src="images/clocks.png" alt="Historial"><p>Historial</p></a>
-            <a href=""><img src="images/playcircle_113957.png" alt="Videos"><p>Tus videos</p></a>
-            <a href=""><img src="images/like_favorite.png" alt="Like"><p>Videos que me gustan</p></a>
-            <a href=""><img src="images/angulo-hacia-abajo.png" alt="Mostrar"><p>Mostrar más</p></a>
+            <a href=""><img src="images/play_youtube_social_media.png" alt="Biblioteca">
+                <p>Biblioteca</p>
+            </a>
+            <a href=""><img src="images/clocks.png" alt="Historial">
+                <p>Historial</p>
+            </a>
+            <a href=""><img src="images/playcircle_113957.png" alt="Videos">
+                <p>Tus videos</p>
+            </a>
+            <a href=""><img src="images/like_favorite.png" alt="Like">
+                <p>Videos que me gustan</p>
+            </a>
+            <a href=""><img src="images/angulo-hacia-abajo.png" alt="Mostrar">
+                <p>Mostrar más</p>
+            </a>
             <hr>
         </div>
         <!-- Structure of subscribeds -->
         <div>
             <div class="subscribeds">
                 <p>Suscripciones</p>
-                <a href=""><img src="images/bxs-user.png" alt="SoyDalto"><p>Soy Dalto</p></a>
-                <a href=""><img src="images/bxs-user.png" alt="Campuslands"><p>Campuslands</p></a>
-                <a href=""><img src="images/bxs-user.png" alt="EDteam"><p>EDteam</p></a>
-                <a href=""><img src="images/bxs-user.png" alt="EDteam"><p>EDteam</p></a>
-                
+                <a href=""><img src="images/bxs-user.png" alt="SoyDalto">
+                    <p>Soy Dalto</p>
+                </a>
+                <a href=""><img src="images/bxs-user.png" alt="Campuslands">
+                    <p>Campuslands</p>
+                </a>
+                <a href=""><img src="images/bxs-user.png" alt="EDteam">
+                    <p>EDteam</p>
+                </a>
+                <a href=""><img src="images/bxs-user.png" alt="EDteam">
+                    <p>EDteam</p>
+                </a>
+
             </div>
         </div>
     </div>
@@ -66,37 +98,39 @@
         <div class="row">
             <div class="play-video">
                 <a>
-                    <img src="https://i.ytimg.com/vi/P7nwKpy_C8E/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhZIF0oZTAP&rs=AOn4CLBuMG2NIsxV53Z_PIPNjtLACqsSSw" alt="">
+                    <img src="https://i.ytimg.com/vi/P7nwKpy_C8E/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhZIF0oZTAP&rs=AOn4CLBuMG2NIsxV53Z_PIPNjtLACqsSSw"
+                        alt="">
                 </a>
                 <p class="title-video">WebApi NetCore Part21 Continue</p>
                 <div class="play-video-info">
-                        <div class="info-chanel">
-                            <img src="/images/CreativeCode.jpg" alt="">
-                            <div class="name-chanel">
-                                <p>CreativeCode</p>
-                                <p class="subscritores">500 suscriptores</p>
-                            </div>
+                    <div class="info-chanel">
+                        <img src="/images/CreativeCode.jpg" alt="">
+                        <div class="name-chanel">
+                            <p>CreativeCode</p>
+                            <p class="subscritores">500 suscriptores</p>
                         </div>
-                        <div class="joined">
-                            <p class="unirse">Unirse</p>
-                            <p class="suscribirme">Suscribirme</p>
+                    </div>
+                    <div class="joined">
+                        <p class="unirse">Unirse</p>
+                        <p class="suscribirme">Suscribirme</p>
+                    </div>
+                    <div class="options-video">
+                        <div class="like-dislike">
+                            <a href=""><img src="images/like.png" alt=""> 500</a>
+                            <a href=""><img src="images/dislike.png" alt=""> 12</a>
                         </div>
-                        <div class="options-video">
-                            <div class="like-dislike">
-                                <a href=""><img src="images/like.png" alt=""> 500</a>
-                                <a href=""><img src="images/dislike.png" alt=""> 12</a>
-                            </div>
-                            <a href="" class="share"><img src="images/share.png" alt="" >Compartir</a>
-                            <a href="" class="download"><img src="images/descargar.png" alt="" >Descargar</a>
-                            <a href=""><img src="images/puntos-suspensivos-del-circulo (1).png" alt="" class="more-info"></a>
-                        </div>
+                        <a href="" class="share"><img src="images/share.png" alt="">Compartir</a>
+                        <a href="" class="download"><img src="images/descargar.png" alt="">Descargar</a>
+                        <a href=""><img src="images/puntos-suspensivos-del-circulo (1).png" alt=""
+                                class="more-info"></a>
+                    </div>
                 </div>
                 <div class="views-playpage">
                     <p>250 Views &bull; 2 weeks ago</p>
                 </div>
-    <!---------Side Right Structure PagePlay--------->
+                <!---------Side Right Structure PagePlay--------->
             </div>
-            <div class="right-sidebar" >
+            <div class="right-sidebar">
                 <div class="menu-plus">
                     <p>Todos</p>
                     <p>CreativeCode</p>
