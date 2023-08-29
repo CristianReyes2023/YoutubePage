@@ -89,7 +89,7 @@ if (videoId) {
                 <p class="title-video">${videoTitle}</p>
                 <div class="play-video-info">
                     <div class="info-chanel">
-                        <img src="/images/CreativeCode.jpg" alt="">
+                        <img src="images/CreativeCode.jpg" alt="">
                         <div class="name-chanel">
                             <p>CreativeCode</p>
                             <p class="subscritores">495 suscriptores</p>
