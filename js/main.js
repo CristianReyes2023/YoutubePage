@@ -1,9 +1,8 @@
-// import { SearchAll } from "../getAll.js";
+import { SearchAll } from "./getAll.js";
 
-// document.querySelector("#chartSearch").addEventListener("change",(e)=>{//se puede usar input o change
-//     SearchAll(e.target.value)
-// });
-// SearchAll()
+document.querySelector("#chartSearch").addEventListener("change",(e)=>{//se puede usar input o change
+    SearchAll(e.target.value)
+});
 
 const options = {
     method: 'GET',
@@ -75,7 +74,7 @@ const url = window.location.href;
 //Window: El metodo Window de un objeto window apunta al propio objeto de la pestaña
 //Location.href = La propiedad href del metodo location, es un buscador que devuelve una cadena que contiene la URL completa y permita obtener el href
 // const url = window.location.href;: Esto obtiene la URL completa de la página actual.
-const videoId = url.split('?')[1].split('=')[1];
+const videoId = url.split('?')[1]?.split('=')[1];
 console.log(videoId);
 // const videoId = url.split('?')[1]?.split('=')[1];: Esta línea divide la URL en dos partes en función del signo de interrogación ("?"). La primera parte es la parte anterior a "?", que no es relevante en este caso. La segunda parte es la parte después de "?", que contiene los parámetros de consulta. Luego, esta segunda parte se divide nuevamente usando "=" como separador para obtener el valor del parámetro "videoId".
 https://www.youtube.com/watch ? v = E6WrPNFH7Nw&t = 1s&ab_channel=CreativeCode
