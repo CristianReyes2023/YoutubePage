@@ -1,4 +1,4 @@
-
+/*FUNCIÓN PARA GENERAR VIDEOS EN LA PAGINA SECUNDARIA*/
 const options = {
     method: 'GET',
     headers: {
@@ -17,7 +17,7 @@ export const SearchAll = async () => {
         if(value.playlist) return undefined;
         cont++;
         if(cont<=10) h = 30*cont;
-        return `<li class="item-searching"><a href="https://www.youtube.com/watch?v${value.video.videoId}">${value.video.title}</a></li>`
+        return `<li class="item-searching"><a href="index-playvideo.html?videoId=${value.video.videoId}">${value.video.title}</a></li>`
     })
     document.querySelector("#active").style.height = `${h}px`;
     document.querySelector("#SearchAll").innerHTML = null;
@@ -25,4 +25,3 @@ export const SearchAll = async () => {
 }
 
 
-//USAMOS EL CODIGO QUE ESTÁ EN RAPIAPI DE SEARCHING

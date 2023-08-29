@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/main.js" defer></script>
+    <script src="js/main.js" type="module" defer></script>
+    <script src="./js/aux-page.js" type="module" defer></script>
     <script src="js/getAll.js" type="module" defer></script>
 </head>
 
@@ -32,7 +33,11 @@
                     </div>
                     <img class="microphone" src="images/bxs-microphone.png" alt="microphone">
                 </div>
-                <div class="result-searching" id="SearchAll">
+                <div style="flex-direction:column; width: 100%; overflow: visible;">
+                    <div class="result-searching" id="active">
+                        <ul id="SearchAll">
+                        </ul>
+                    </div>
                 </div>
             </div>
             <!-- Structure of Navbar-Profile -->
