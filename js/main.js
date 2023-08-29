@@ -64,15 +64,33 @@ fetch("json/jsonVideos.json", options)
     })
     .catch(err => console.log(err));
 
-    const url = window.location.href;
-    const videoId = url.split('?')[1]?.split('=')[1];
-    
-    if (videoId) {
-        const videoContainer = document.querySelector("#play-video-final");
-        const iframe = document.createElement("iframe");
-        iframe.src = `https://www.youtube.com/embed/${videoId}`;
-        iframe.frameBorder = "0";
-        iframe.allowFullscreen = true;
-        
-        videoContainer.appendChild(iframe);
+
+
+const url = window.location.href;
+// const url = window.location.href;: Esto obtiene la URL completa de la página actual.
+const videoId = url.split('?')[1]?.split('=')[1];
+// const videoId = url.split('?')[1]?.split('=')[1];: Esta línea divide la URL en dos partes en función del signo de interrogación ("?"). La primera parte es la parte anterior a "?", que no es relevante en este caso. La segunda parte es la parte después de "?", que contiene los parámetros de consulta. Luego, esta segunda parte se divide nuevamente usando "=" como separador para obtener el valor del parámetro "videoId". El uso de ?. asegura que si no se encuentra un parámetro "videoId", el resultado será undefined.
+https://www.youtube.com/watch ? v = E6WrPNFH7Nw&t = 1s&ab_channel=CreativeCode
+
+if (videoId) {
+    const videoContainer = document.querySelector("#play-video-final");
+
+    // Hacer una solicitud a la API de YouTube Data para obtener información del video
+    fetch("json/jsonVideos.json")
+        .then(res => res.json())
+        .then(response => {
+            const video = response.contents.find(video => video.video.videoId === videoId);
+            if (video) {
+                const videoTitle = video.video.title;
+                videoContainer.insertAdjacentHTML("beforeend",/*html*/`
+                <iframe src="https://www.youtube.com/embed/${videoId}" frameborder="0" allowFullscreen="true"></iframe>
+                <p class="title-video">${videoTitle}</p>`)
+                console.log("Título del video:", videoTitle);
+            } else {
+                console.log("Video no encontrado en el JSON.");
+            }
+        })
+        .catch(error => {
+            console.error("Error al obtener información del JSON:", error);
+        });
     }

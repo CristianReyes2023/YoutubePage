@@ -428,6 +428,7 @@ header {
 .play-video .title-video {
     font-weight: 600;
     font-size: 1.5vw;
+    color: black;
 }
 
 .play-video-info {
