@@ -82,10 +82,40 @@ if (videoId) {
             const video = response.contents.find(video => video.video.videoId === videoId);
             if (video) {
                 const videoTitle = video.video.title;
+                const views = video.video.stats.views;
+                const timeago = video.video.publishedTimeText
                 videoContainer.insertAdjacentHTML("beforeend",/*html*/`
-                <iframe src="https://www.youtube.com/embed/${videoId}" frameborder="0" allowFullscreen="true"></iframe>
-                <p class="title-video">${videoTitle}</p>`)
+                <a><iframe src="https://www.youtube.com/embed/${videoId}" frameborder="0" allowFullscreen="true"></iframe></a>
+                <p class="title-video">${videoTitle}</p>
+                <div class="play-video-info">
+                    <div class="info-chanel">
+                        <img src="/images/CreativeCode.jpg" alt="">
+                        <div class="name-chanel">
+                            <p>CreativeCode</p>
+                            <p class="subscritores">495 suscriptores</p>
+                        </div>
+                    </div>
+                    <div class="joined">
+                        <p class="unirse">Unirse</p>
+                        <p class="suscribirme">Suscribirme</p>
+                    </div>
+                    <div class="options-video">
+                        <div class="like-dislike">
+                            <a href=""><img src="images/like.png" alt=""> 3</a>
+                            <a href=""><img src="images/dislike.png" alt=""></a>
+                        </div>
+                        <a href="" class="share"><img src="images/share.png" alt="">Compartir</a>
+                        <a href="" class="download"><img src="images/descargar.png" alt="">Descargar</a>
+                        <a href=""><img src="images/puntos-suspensivos-del-circulo (1).png" alt=""
+                                class="more-info"></a>
+                    </div>
+                </div>
+                <div class="views-playpage">
+                    <p>${views} Views &bull; ${timeago}</p>
+                </div>`)
                 console.log("Título del video:", videoTitle);
+                console.log("Título del video:", views);
+
             } else {
                 console.log("Video no encontrado en el JSON.");
             }
