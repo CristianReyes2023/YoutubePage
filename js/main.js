@@ -66,6 +66,11 @@ fetch("json/jsonVideos.json", options)
 
 
 
+
+
+
+// Generar un número aleatorio entre 1 y 100 (puedes ajustar los valores)
+const randomNum = Math.floor(Math.random() * 100) + 1;
 const url = window.location.href;
 // const url = window.location.href;: Esto obtiene la URL completa de la página actual.
 const videoId = url.split('?')[1]?.split('=')[1];
@@ -101,7 +106,7 @@ if (videoId) {
                     </div>
                     <div class="options-video">
                         <div class="like-dislike">
-                            <a href=""><img src="images/like.png" alt=""> 3</a>
+                            <a href=""><img src="images/like.png" alt=""><span id="randomNumero" style="padding-left: 1vw;">${randomNum}</span></a>
                             <a href=""><img src="images/dislike.png" alt=""></a>
                         </div>
                         <a href="" class="share"><img src="images/share.png" alt="">Compartir</a>
@@ -113,9 +118,6 @@ if (videoId) {
                 <div class="views-playpage">
                     <p>${views} Views &bull; ${timeago}</p>
                 </div>`)
-                console.log("Título del video:", videoTitle);
-                console.log("Título del video:", views);
-
             } else {
                 console.log("Video no encontrado en el JSON.");
             }

@@ -133,11 +133,25 @@ header {
     position:absolute;
     padding-left: 1vw;
     margin-left: 1vw;
+    top:3.3vw;
     width: 33vw;
-    top: 5.6vw;
-    border: red solid 1px;
-}
+    padding: 0.5vw 0.5vw 0.5vw 0.5vw;
+    background-color: rgb(242, 242, 242);
+    border-radius: 1vw;
 
+}
+.result-searching p{
+    color: rgb(57, 57, 57);
+    font-size: 1.5vw;
+    display: flex;
+    align-items: center;
+    margin: 0.5vw 0.5vw 0.5vw 0.5vw;
+}
+.result-searching img{
+    color: white;
+    width: 1.5vw;
+    margin: 0.5vw 2vw 0.5vw 0.5vw;
+}
 .nav-right {
     display: flex;
     align-items: center;
@@ -375,6 +389,7 @@ header {
     background-color: rgb(12, 12, 12);
     border-radius: 0.7vw;
     color: #ffffff;
+
 }
 
 .right-sidebar {
@@ -631,7 +646,9 @@ header {
     .nav-right img:hover {
         background-color: rgb(235, 235, 235);
     }
-
+    .result-searching{
+        top:3.8vw;
+    }
     /* ---------------SIDEBAR -----------------*/
 
     .sidebar {
@@ -856,7 +873,9 @@ header {
         background-color: rgb(235, 235, 235);
     }
 
-
+    .result-searching{
+        top:5.8vw;
+    }
     .nav-right .user-icon {
         height: 3vw;
         padding: 0vw;
@@ -1000,14 +1019,8 @@ header {
 
     /*-------------PLAY VIDEOS PAGE--------------*/
     .play-container {
-        padding-left: 5vw;
+        padding-left: 8vw;
     }
-
-    .row {
-        display: flex;
-        flex-direction: column;
-    }
-
     .play-video {
         margin-bottom: 2vw;
     }
@@ -1015,11 +1028,10 @@ header {
     .play-video video {
         width: 88vw;
     }
-    /*-------------PLAY VIDEOS PAGE--------------*/
-    .play-container {
-        padding-left: 8vw;
+    .play-video iframe {
+        width: 88vw;
+        height: 50vw;
     }
-
     .row {
         display: flex;
         flex-direction: initial;
@@ -1042,7 +1054,7 @@ header {
         margin-bottom: 1.5vw;
     }
 
-    .menu-plus p {
+    .menu-plus a {
         padding: 0.8vw 2vw 0.8vw 2vw;
         margin-left: 1vw;
         background-color: rgb(242, 242, 242);
