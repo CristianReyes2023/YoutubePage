@@ -34,7 +34,7 @@ fetch("json/jsonVideos.json", options)
                     <a href="index-playvideo.html?videoId=${video.video.videoId}"><img src="${video.video.thumbnails[video.video.thumbnails.length - 1].url}" alt="videos" class="img-miniatura"/></a>
                     </div>
                     <div class="video-info">
-                        <a href="index-playvideo.html">${video.video.title}</a>
+                        <a href="index-playvideo.html?videoId=${video.video.videoId}">${video.video.title}</a>
                         <p>${video.video.stats.views} Views &bull; ${video.video.publishedTimeText}</p>
                     </div>
                 </div>
@@ -72,9 +72,12 @@ fetch("json/jsonVideos.json", options)
 // Generar un número aleatorio entre 1 y 100 (puedes ajustar los valores)
 const randomNum = Math.floor(Math.random() * 100) + 1;
 const url = window.location.href;
+//Window: El metodo Window de un objeto window apunta al propio objeto de la pestaña
+//Location.href = La propiedad href del metodo location, es un buscador que devuelve una cadena que contiene la URL completa y permita obtener el href
 // const url = window.location.href;: Esto obtiene la URL completa de la página actual.
-const videoId = url.split('?')[1]?.split('=')[1];
-// const videoId = url.split('?')[1]?.split('=')[1];: Esta línea divide la URL en dos partes en función del signo de interrogación ("?"). La primera parte es la parte anterior a "?", que no es relevante en este caso. La segunda parte es la parte después de "?", que contiene los parámetros de consulta. Luego, esta segunda parte se divide nuevamente usando "=" como separador para obtener el valor del parámetro "videoId". El uso de ?. asegura que si no se encuentra un parámetro "videoId", el resultado será undefined.
+const videoId = url.split('?')[1].split('=')[1];
+console.log(videoId);
+// const videoId = url.split('?')[1]?.split('=')[1];: Esta línea divide la URL en dos partes en función del signo de interrogación ("?"). La primera parte es la parte anterior a "?", que no es relevante en este caso. La segunda parte es la parte después de "?", que contiene los parámetros de consulta. Luego, esta segunda parte se divide nuevamente usando "=" como separador para obtener el valor del parámetro "videoId".
 https://www.youtube.com/watch ? v = E6WrPNFH7Nw&t = 1s&ab_channel=CreativeCode
 
 if (videoId) {
