@@ -340,8 +340,9 @@ header {
     flex-wrap: wrap;
 }
 
-.play-video img {
+.play-video iframe {
     width: 60vw;
+    height: 35vw;
 }
 
 .views-playpage {
