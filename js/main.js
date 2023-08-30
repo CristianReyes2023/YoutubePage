@@ -1,16 +1,12 @@
+/*------------------IMPORT FUNCTION SEARCH-----------------*/
 
 import { SearchAll } from "./getAll.js";
-document.querySelector("#chartSearch").addEventListener("change",(e)=>{//se puede usar input o change
+document.querySelector("#chartSearch").addEventListener("input",(e)=>{//se puede usar input o change
     SearchAll(e.target.value)
 });
 
-const options = {
-    method: 'GET',
-    headers: {
-        'X-RapidAPI-Key': '67bc891487msh83d7f6087e5baa4p137206jsn95c6efd2fc62',
-        'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
-    }
-};
+
+/*------------------FUNCTION SWIP SIDEBAR-------------------*/
 
 let menuIcon = document.querySelector(".menu-icon");
 let sidebar = document.querySelector(".sidebar");
@@ -21,7 +17,20 @@ menuIcon.addEventListener('click', () => {
     container.classList.toggle('large-container')
 })
 
-/*FUNCION PARA GENERAR VIDEOS DE PAGINA PRINCIPAL*/
+
+/*-------------------------KEY FROM API----------------------*/
+
+const options = {
+    method: 'GET',
+    headers: {
+        'X-RapidAPI-Key': '2c014407bcmshb6ebf5a0e507adfp14d616jsn135730e786a0',
+        'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
+    }
+};
+
+
+/*----------FUNCTION TO MAKE VIDEOS IN THE MAIN PAGE--------*/
+
 
 fetch("json/jsonVideos.json", options)
     .then(res => res.json())

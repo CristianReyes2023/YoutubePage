@@ -1,9 +1,12 @@
 
+/*------------------IMPORT FUNCTION SEARCH-----------------*/
 import { SearchAll } from "./getAll.js";
-document.querySelector("#chartSearch").addEventListener("input",(e)=>{//se puede usar input o change
+document.querySelector("#chartSearch").addEventListener("input",(e)=>{//We can use input or change
     SearchAll(e.target.value);
 });
 
+
+/*------------------FUNCTION SWIP SIDEBAR-------------------*/
 let menuIcon = document.querySelector(".menu-icon");
 let sidebar = document.querySelector(".sidebar");
 let container = document.querySelector(".main-container");
@@ -14,15 +17,21 @@ menuIcon.addEventListener('click', () => {
 })
 
 
+
+/*-------------------------KEY FROM API----------------------*/
+
 const options = {
     method: 'GET',
     headers: {
-        'X-RapidAPI-Key': '67bc891487msh83d7f6087e5baa4p137206jsn95c6efd2fc62',
+        'X-RapidAPI-Key': '2c014407bcmshb6ebf5a0e507adfp14d616jsn135730e786a0',
         'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
     }
 };
 
-// Generar un número aleatorio entre 1 y 100 (puedes ajustar los valores)
+
+/*----FUNCTION TO REDIRECT AND PLAY VIDEO IN AUX-INDEX ---- */
+
+
 const randomNum = Math.floor(Math.random() * 100) + 1;
 const url = window.location.href;
 //Window: El metodo Window de un objeto window apunta al propio objeto de la pestaña
@@ -37,7 +46,7 @@ if (videoId) {
     const videoContainer = document.querySelector("#play-video-final");
 
     // Hacer una solicitud a la API de YouTube Data para obtener información del video
-    fetch("json/jsonVideos.json")
+    fetch("https://youtube138.p.rapidapi.com/channel/videos/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US",options)
         .then(res => res.json())
         .then(response => {
             const video = response.contents.find(video => video.video.videoId === videoId);
@@ -83,7 +92,7 @@ if (videoId) {
         });
     }
 
-    
+/*----------FUNCTION TO MAKE VIDEOS IN AUX INDEX--------*/
 
 fetch("json/jsonVideos.json", options)
 .then(res => res.json())
