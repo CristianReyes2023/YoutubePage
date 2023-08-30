@@ -1,5 +1,6 @@
 
 /*------------------IMPORT FUNCTION SEARCH-----------------*/
+
 import { SearchAll } from "./getAll.js";
 document.querySelector("#chartSearch").addEventListener("input",(e)=>{//We can use input or change
     SearchAll(e.target.value);
@@ -7,6 +8,7 @@ document.querySelector("#chartSearch").addEventListener("input",(e)=>{//We can u
 
 
 /*------------------FUNCTION SWIP SIDEBAR-------------------*/
+
 let menuIcon = document.querySelector(".menu-icon");
 let sidebar = document.querySelector(".sidebar");
 let container = document.querySelector(".main-container");
@@ -23,7 +25,7 @@ menuIcon.addEventListener('click', () => {
 const options = {
     method: 'GET',
     headers: {
-        'X-RapidAPI-Key': '2c014407bcmshb6ebf5a0e507adfp14d616jsn135730e786a0',
+        'X-RapidAPI-Key': '9c292a8e22mshc7918ad00472565p1e1b26jsn796eac206a31',
         'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
     }
 };
@@ -31,14 +33,12 @@ const options = {
 
 /*----FUNCTION TO REDIRECT AND PLAY VIDEO IN AUX-INDEX ---- */
 
-
 const randomNum = Math.floor(Math.random() * 100) + 1;
 const url = window.location.href;
 //Window: El metodo Window de un objeto window apunta al propio objeto de la pestaña
 //Location.href = La propiedad href del metodo location, es un buscador que devuelve una cadena que contiene la URL completa y permita obtener el href
 // const url = window.location.href;: Esto obtiene la URL completa de la página actual.
 const videoId = url.split('?')[1]?.split('=')[1];
-console.log(videoId);
 // const videoId = url.split('?')[1]?.split('=')[1];: Esta línea divide la URL en dos partes en función del signo de interrogación ("?"). La primera parte es la parte anterior a "?", que no es relevante en este caso. La segunda parte es la parte después de "?", que contiene los parámetros de consulta. Luego, esta segunda parte se divide nuevamente usando "=" como separador para obtener el valor del parámetro "videoId".
 https://www.youtube.com/watch ? v = E6WrPNFH7Nw&t = 1s&ab_channel=CreativeCode
 
@@ -91,6 +91,7 @@ if (videoId) {
             console.error("Error al obtener información del JSON:", error);
         });
     }
+
 
 /*----------FUNCTION TO MAKE VIDEOS IN AUX INDEX--------*/
 

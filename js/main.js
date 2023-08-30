@@ -23,14 +23,13 @@ menuIcon.addEventListener('click', () => {
 const options = {
     method: 'GET',
     headers: {
-        'X-RapidAPI-Key': '2c014407bcmshb6ebf5a0e507adfp14d616jsn135730e786a0',
+        'X-RapidAPI-Key': '9c292a8e22mshc7918ad00472565p1e1b26jsn796eac206a31',
         'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
     }
 };
 
 
 /*----------FUNCTION TO MAKE VIDEOS IN THE MAIN PAGE--------*/
-
 
 fetch("json/jsonVideos.json", options)
     .then(res => res.json())
