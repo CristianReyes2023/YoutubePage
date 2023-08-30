@@ -27,7 +27,7 @@ export const SearchAll = async (searchValue) => {
     let array = filteredArray.map((value) => {
         cont++;
         if (cont <= 10) h = 30 * cont;
-        return `<li class="item-searching"><a href="index-playvideo.html?videoId=${value.video.videoId}">${value.video.title}</a></li>`;
+        return `<li class="item-searching"><a href="index-playvideo.html?videoId=${value.video.videoId}"><img src="images/busqueda.png">${value.video.title}</a></li>`;
     });
     console.log(filteredArray)
     console.log(array)

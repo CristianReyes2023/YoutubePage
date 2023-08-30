@@ -47,6 +47,7 @@ if (videoId) {
 
     // Hacer una solicitud a la API de YouTube Data para obtener información del video
     fetch("https://youtube138.p.rapidapi.com/channel/videos/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US",options)
+    // fetch("../json/jsonVideos.json",options)
         .then(res => res.json())
         .then(response => {
             const video = response.contents.find(video => video.video.videoId === videoId);

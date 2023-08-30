@@ -28,7 +28,8 @@ CLAVE: "9c292a8e22mshc7918ad00472565p1e1b26jsn796eac206a31"
 
 ##### NOTA: Las funicones anteriores se repiten en el archivo aux-page
 
-Para este programa se dejo asociada las funciones al API:                                                                /*--------FUNCTION TO GENERATE VIDEOS FROM THE SEARCH ENGINE--------*/ (getAll.js)
+Para este programa se dejo asociada las funciones al API:                                                                
+/*--------FUNCTION TO GENERATE VIDEOS FROM THE SEARCH ENGINE--------*/ (getAll.js)
 
 /*----FUNCTION TO REDIRECT AND PLAY VIDEO IN AUX-INDEX ---- */ (aux-page.js)
 
