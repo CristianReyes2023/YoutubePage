@@ -25,7 +25,7 @@ menuIcon.addEventListener('click', () => {
 const options = {
     method: 'GET',
     headers: {
-        'X-RapidAPI-Key': '9c292a8e22mshc7918ad00472565p1e1b26jsn796eac206a31',
+        'X-RapidAPI-Key': '03a286676amsh3c0b5f9eb902f7cp17f84ejsne2cec7d8a062',
         'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
     }
 };
